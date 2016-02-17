@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="Test jpa">
+		<class>model.Contact</class>
+		<class>model.ContactPK</class>
+		<class>model.Episode</class>
+		<class>model.Fichier</class>
+		<class>model.Film</class>
+		<class>model.Galerie</class>
+		<class>model.Media</class>
+		<class>model.Musique</class>
+		<class>model.Photo</class>
+		<class>model.Playlist</class>
+		<class>model.Salle</class>
+		<class>model.Tag</class>
+		<class>model.Utilisateur</class>
+		<class>model.Video</class>
+	</persistence-unit>
+</persistence>
