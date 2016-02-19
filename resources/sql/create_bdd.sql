@@ -38,26 +38,44 @@ create table media (
 ----- Création de la table "fichier" -----
 create table fichier() inherits(media);
 
+----- Ajout de la clé primaire de la table "fichier" -----
+alter table fichier add constraint pk_fichier primary key (id);
+
 ----- Ajout de la colonne "cheminfichier" à la table "fichier" -----
 alter table fichier add column cheminfichier varchar(255);
 
 ----- Création de la table "photo" -----
 create table photo() inherits(fichier);
 
+----- Ajout de la clé primaire de la table "fichier" -----
+alter table photo add constraint pk_photo primary key (id);
+
 ----- Création de la table "musique" -----
 create table musique() inherits(fichier);
+
+----- Ajout de la clé primaire de la table "musique" -----
+alter table musique add constraint pk_musique primary key (id);
 
 ----- Création de la table "video" -----
 create table video() inherits(fichier);
 
+----- Ajout de la clé primaire de la table "video" -----
+alter table video add constraint pk_video primary key (id);
+
 ----- Création de la table "film" -----
 create table film() inherits(video);
+
+----- Ajout de la clé primaire de la table "film" -----
+alter table film add constraint pk_film primary key (id);
 
 ----- Ajout de la colonne "realisteur" à la table "film" -----
 alter table film add column realisateur varchar(150);
 
 ----- Création de la table "episode" -----
 create table episode() inherits(video);
+
+----- Ajout de la clé primaire de la table "episode" -----
+alter table episode add constraint pk_episode primary key (id);
 
 ----- Ajout de la colonne "numero" à la table "episode" -----
 alter table episode add column numero integer;
@@ -68,8 +86,14 @@ alter table episode add column serie varchar(150);
 ----- Création de la table "playlist" -----
 create table playlist() inherits(media);
 
+----- Ajout de la clé primaire de la table "playlist" -----
+alter table playlist add constraint pk_playlist primary key (id);
+
 ----- Création de la table "galerie" -----
 create table galerie() inherits(playlist);
+
+----- Ajout de la clé primaire de la table "galerie" -----
+alter table galerie add constraint pk_galerie primary key (id);
 
 ----- Création de la table "salle" -----
 create table salle (
@@ -103,7 +127,6 @@ create table abonnement (
 );
 
 ----- Création de la table "contenuplaylist" -----
--- / ! \ non fonctionnel
 create table contenuplaylist (
 	idplaylist integer,
 	idmedia integer,
@@ -113,7 +136,6 @@ create table contenuplaylist (
 );
 
 ----- Création de la table "contenugalerie" -----
--- / ! \ non fonctionnel
 create table contenugalerie (
 	galerie integer,
 	photo integer,
