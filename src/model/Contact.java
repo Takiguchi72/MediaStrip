@@ -16,17 +16,17 @@ public class Contact implements Serializable {
 	@EmbeddedId
 	private ContactPK id;
 
-	private String statut;
+	private String status;
 
-	//bi-directional many-to-one association to Utilisateur
+	//bi-directional many-to-one association to User
 	@ManyToOne
-	@JoinColumn(name="utilisateur1")
-	private Utilisateur utilisateur1Bean;
+	@JoinColumn(name="user1")
+	private User user1Bean;
 
-	//bi-directional many-to-one association to Utilisateur
+	//bi-directional many-to-one association to User
 	@ManyToOne
-	@JoinColumn(name="utilisateur2")
-	private Utilisateur utilisateur2Bean;
+	@JoinColumn(name="user2")
+	private User user2Bean;
 
 	public Contact() {
 	}
@@ -39,28 +39,28 @@ public class Contact implements Serializable {
 		this.id = id;
 	}
 
-	public String getStatut() {
-		return this.statut;
+	public String getStatus() {
+		return this.status;
 	}
 
-	public void setStatut(String statut) {
-		this.statut = statut;
+	public void setStatus(String status) {
+		this.status = status;
 	}
 
-	public Utilisateur getUtilisateur1Bean() {
-		return this.utilisateur1Bean;
+	public User getUser1Bean() {
+		return this.user1Bean;
 	}
 
-	public void setUtilisateur1Bean(Utilisateur utilisateur1Bean) {
-		this.utilisateur1Bean = utilisateur1Bean;
+	public void setUser1Bean(User user1Bean) {
+		this.user1Bean = user1Bean;
 	}
 
-	public Utilisateur getUtilisateur2Bean() {
-		return this.utilisateur2Bean;
+	public User getUser2Bean() {
+		return this.user2Bean;
 	}
 
-	public void setUtilisateur2Bean(Utilisateur utilisateur2Bean) {
-		this.utilisateur2Bean = utilisateur2Bean;
+	public void setUser2Bean(User user2Bean) {
+		this.user2Bean = user2Bean;
 	}
 
 }

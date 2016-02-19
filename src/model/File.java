@@ -6,12 +6,12 @@ import java.sql.Timestamp;
 
 
 /**
- * The persistent class for the episode database table.
+ * The persistent class for the fichier database table.
  * 
  */
 @Entity
-@NamedQuery(name="Episode.findAll", query="SELECT e FROM Episode e")
-public class Episode implements Serializable {
+@NamedQuery(name="File.findAll", query="SELECT f FROM File f")
+public class File implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	private String filePath;
@@ -19,23 +19,18 @@ public class Episode implements Serializable {
 	private Timestamp createdAt;
 
 	private String description;
-
 	@Id
 	private Integer id;
-
-	private Integer number;
 
 	private Integer publisher;
 
 	private Boolean published;
 
-	private String serie;
-
 	private Integer theme;
 
 	private String title;
 
-	public Episode() {
+	public File() {
 	}
 
 	public String getFilePath() {
@@ -70,14 +65,6 @@ public class Episode implements Serializable {
 		this.id = id;
 	}
 
-	public Integer getNumber() {
-		return this.number;
-	}
-
-	public void setNumber(Integer number) {
-		this.number = number;
-	}
-
 	public Integer getPublisher() {
 		return this.publisher;
 	}
@@ -92,14 +79,6 @@ public class Episode implements Serializable {
 
 	public void setPublished(Boolean published) {
 		this.published = published;
-	}
-
-	public String getSerie() {
-		return this.serie;
-	}
-
-	public void setSerie(String serie) {
-		this.serie = serie;
 	}
 
 	public Integer getTheme() {

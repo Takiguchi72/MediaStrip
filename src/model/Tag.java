@@ -17,7 +17,7 @@ public class Tag implements Serializable {
 	@Id
 	private Integer id;
 
-	private String libelle;
+	private String label;
 
 	//bi-directional many-to-many association to Media
 	@ManyToMany
@@ -47,12 +47,12 @@ public class Tag implements Serializable {
 		this.id = id;
 	}
 
-	public String getLibelle() {
-		return this.libelle;
+	public String getLabel() {
+		return this.label;
 	}
 
-	public void setLibelle(String libelle) {
-		this.libelle = libelle;
+	public void setLabel(String label) {
+		this.label = label;
 	}
 
 	public List<Media> getMedias1() {

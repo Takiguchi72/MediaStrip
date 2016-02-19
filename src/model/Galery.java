@@ -6,15 +6,13 @@ import java.sql.Timestamp;
 
 
 /**
- * The persistent class for the episode database table.
+ * The persistent class for the galerie database table.
  * 
  */
 @Entity
-@NamedQuery(name="Episode.findAll", query="SELECT e FROM Episode e")
-public class Episode implements Serializable {
+@NamedQuery(name="Galery.findAll", query="SELECT g FROM Galery g")
+public class Galery implements Serializable {
 	private static final long serialVersionUID = 1L;
-
-	private String filePath;
 
 	private Timestamp createdAt;
 
@@ -23,27 +21,15 @@ public class Episode implements Serializable {
 	@Id
 	private Integer id;
 
-	private Integer number;
-
 	private Integer publisher;
 
 	private Boolean published;
-
-	private String serie;
 
 	private Integer theme;
 
 	private String title;
 
-	public Episode() {
-	}
-
-	public String getFilePath() {
-		return this.filePath;
-	}
-
-	public void setFilePath(String filePath) {
-		this.filePath = filePath;
+	public Galery() {
 	}
 
 	public Timestamp getCreatedAt() {
@@ -66,16 +52,9 @@ public class Episode implements Serializable {
 		return this.id;
 	}
 
+	@Id
 	public void setId(Integer id) {
 		this.id = id;
-	}
-
-	public Integer getNumber() {
-		return this.number;
-	}
-
-	public void setNumber(Integer number) {
-		this.number = number;
 	}
 
 	public Integer getPublisher() {
@@ -92,14 +71,6 @@ public class Episode implements Serializable {
 
 	public void setPublished(Boolean published) {
 		this.published = published;
-	}
-
-	public String getSerie() {
-		return this.serie;
-	}
-
-	public void setSerie(String serie) {
-		this.serie = serie;
 	}
 
 	public Integer getTheme() {
