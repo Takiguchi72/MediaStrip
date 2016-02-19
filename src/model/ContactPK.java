@@ -13,24 +13,24 @@ public class ContactPK implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Column(insertable=false, updatable=false)
-	private Integer utilisateur1;
+	private Integer user1;
 
 	@Column(insertable=false, updatable=false)
-	private Integer utilisateur2;
+	private Integer user2;
 
 	public ContactPK() {
 	}
-	public Integer getUtilisateur1() {
-		return this.utilisateur1;
+	public Integer getUser1() {
+		return this.user1;
 	}
-	public void setUtilisateur1(Integer utilisateur1) {
-		this.utilisateur1 = utilisateur1;
+	public void setUser1(Integer user1) {
+		this.user1 = user1;
 	}
-	public Integer getUtilisateur2() {
-		return this.utilisateur2;
+	public Integer getUser2() {
+		return this.user2;
 	}
-	public void setUtilisateur2(Integer utilisateur2) {
-		this.utilisateur2 = utilisateur2;
+	public void setUser2(Integer user2) {
+		this.user2 = user2;
 	}
 
 	public boolean equals(Object other) {
@@ -42,15 +42,15 @@ public class ContactPK implements Serializable {
 		}
 		ContactPK castOther = (ContactPK)other;
 		return 
-			this.utilisateur1.equals(castOther.utilisateur1)
-			&& this.utilisateur2.equals(castOther.utilisateur2);
+			this.user1.equals(castOther.user1)
+			&& this.user2.equals(castOther.user2);
 	}
 
 	public int hashCode() {
 		final int prime = 31;
 		int hash = 17;
-		hash = hash * prime + this.utilisateur1.hashCode();
-		hash = hash * prime + this.utilisateur2.hashCode();
+		hash = hash * prime + this.user1.hashCode();
+		hash = hash * prime + this.user2.hashCode();
 		
 		return hash;
 	}

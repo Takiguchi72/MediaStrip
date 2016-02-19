@@ -18,13 +18,13 @@ public class Media implements Serializable {
 	@Id
 	private Integer id;
 
-	private Timestamp datecreation;
+	private Timestamp createdAt;
 
 	private String description;
 
-	private Boolean publique;
+	private Boolean published;
 
-	private String titre;
+	private String title;
 
 	//bi-directional many-to-many association to Tag
 	@ManyToMany(mappedBy="medias1")
@@ -35,10 +35,10 @@ public class Media implements Serializable {
 	@JoinColumn(name="theme")
 	private Tag tag;
 
-	//bi-directional many-to-one association to Utilisateur
+	//bi-directional many-to-one association to User
 	@ManyToOne
-	@JoinColumn(name="publieur")
-	private Utilisateur utilisateur;
+	@JoinColumn(name="publisher")
+	private User user;
 
 	public Media() {
 	}
@@ -51,12 +51,12 @@ public class Media implements Serializable {
 		this.id = id;
 	}
 
-	public Timestamp getDatecreation() {
-		return this.datecreation;
+	public Timestamp getCreatedAt() {
+		return this.createdAt;
 	}
 
-	public void setDatecreation(Timestamp datecreation) {
-		this.datecreation = datecreation;
+	public void setCreatedAt(Timestamp createdAt) {
+		this.createdAt = createdAt;
 	}
 
 	public String getDescription() {
@@ -67,20 +67,20 @@ public class Media implements Serializable {
 		this.description = description;
 	}
 
-	public Boolean getPublique() {
-		return this.publique;
+	public Boolean getPublished() {
+		return this.published;
 	}
 
-	public void setPublique(Boolean publique) {
-		this.publique = publique;
+	public void setPublished(Boolean published) {
+		this.published = published;
 	}
 
-	public String getTitre() {
-		return this.titre;
+	public String getTitle() {
+		return this.title;
 	}
 
-	public void setTitre(String titre) {
-		this.titre = titre;
+	public void setTitle(String title) {
+		this.title = title;
 	}
 
 	public List<Tag> getTags() {
@@ -99,12 +99,12 @@ public class Media implements Serializable {
 		this.tag = tag;
 	}
 
-	public Utilisateur getUtilisateur() {
-		return this.utilisateur;
+	public User getUser() {
+		return this.user;
 	}
 
-	public void setUtilisateur(Utilisateur utilisateur) {
-		this.utilisateur = utilisateur;
+	public void setUser(User user) {
+		this.user = user;
 	}
 
 }

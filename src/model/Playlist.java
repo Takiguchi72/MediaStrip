@@ -14,30 +14,30 @@ import java.sql.Timestamp;
 public class Playlist implements Serializable {
 	private static final long serialVersionUID = 1L;
 
-	private Timestamp datecreation;
+	private Timestamp createdAt;
 
 	private String description;
 
 	@Id
 	private Integer id;
 
-	private Integer publieur;
+	private Integer publisher;
 
-	private Boolean publique;
+	private Boolean published;
 
 	private Integer theme;
 
-	private String titre;
+	private String title;
 
 	public Playlist() {
 	}
 
-	public Timestamp getDatecreation() {
-		return this.datecreation;
+	public Timestamp getCreatedAt() {
+		return this.createdAt;
 	}
 
-	public void setDatecreation(Timestamp datecreation) {
-		this.datecreation = datecreation;
+	public void setCreatedAt(Timestamp createdAt) {
+		this.createdAt = createdAt;
 	}
 
 	public String getDescription() {
@@ -56,20 +56,20 @@ public class Playlist implements Serializable {
 		this.id = id;
 	}
 
-	public Integer getPublieur() {
-		return this.publieur;
+	public Integer getPublisher() {
+		return this.publisher;
 	}
 
-	public void setPublieur(Integer publieur) {
-		this.publieur = publieur;
+	public void setPublisher(Integer publisher) {
+		this.publisher = publisher;
 	}
 
-	public Boolean getPublique() {
-		return this.publique;
+	public Boolean getPublished() {
+		return this.published;
 	}
 
-	public void setPublique(Boolean publique) {
-		this.publique = publique;
+	public void setPublished(Boolean published) {
+		this.published = published;
 	}
 
 	public Integer getTheme() {
@@ -80,12 +80,12 @@ public class Playlist implements Serializable {
 		this.theme = theme;
 	}
 
-	public String getTitre() {
-		return this.titre;
+	public String getTitle() {
+		return this.title;
 	}
 
-	public void setTitre(String titre) {
-		this.titre = titre;
+	public void setTitle(String title) {
+		this.title = title;
 	}
 
 }
